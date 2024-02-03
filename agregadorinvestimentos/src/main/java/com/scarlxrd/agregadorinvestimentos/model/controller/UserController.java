@@ -10,6 +10,7 @@ import com.scarlxrd.agregadorinvestimentos.model.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -49,7 +50,7 @@ public class UserController {
     @PutMapping("/{userId}")
     public ResponseEntity<Void> updateUserById(@PathVariable("userId") String userId,
                                                @RequestBody UpdateUserDto updateUserDto) {
-        userService.updateUserById(userId, updateUserDto);
+        userService.updateUserById(updateUserDto, userId);
         return ResponseEntity.noContent().build();
     }
 
