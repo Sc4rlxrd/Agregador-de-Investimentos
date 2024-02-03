@@ -47,6 +47,10 @@ public class User {
         this.accounts = accounts;
     }
 
+    public User(UUID uuid, String username, String email, String password, Instant now, Object o) {
+
+    }
+
     public UUID getUserId() {
         return userId;
     }
@@ -102,4 +106,6 @@ public class User {
     public void setAccounts(List<Account> accounts) {
         this.accounts = accounts;
     }
+
+
 }
